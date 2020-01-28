@@ -13,33 +13,154 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+
+        .top-bar-bg {
+            background: #1DAAA3;
+        }
+
+            .top-bar-bg img {
+                display: inline-block;
+                margin: 5px 0;
+            }
+
+        .top-bar-content p {
+            display: inline;
+            float: left;
+            margin-bottom: 0;
+            line-height: 38px;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .top-right {
+            float: right;
+        }
+
+        .top-bar-content ul {
+            list-style: none;
+        }
+
+            .top-bar-content ul li {
+                float: left;
+            }
+
+                .top-bar-content ul li a {
+                    color: #fff;
+                    line-height: 38px;
+                    padding: 0 15px;
+                    border-right: 1px solid #fff;
+                }
+
+                .top-bar-content ul li .nav-mega-menu a {
+                    padding: 0;
+                }
+
+                .top-bar-content ul li:last-child a {
+                    border-right: 0;
+                    padding-right: 0;
+                }
+
+                .top-bar-content ul li ul li {
+                    float: none;
+                }
+
+                    .top-bar-content ul li ul li a {
+                        color: #191919;
+                        line-height: 26px;
+                    }
+
+                .top-bar-content ul li .nav-mega-menu a i {
+                    position: absolute;
+                    right: 15px;
+                    line-height: 24px;
+                    top: 8px;
+                }
+
+                .top-bar-content ul li .nav-mega-menu a.compare-btn {
+                    background-color: #9d1b42;
+                    color: #fff !important;
+                    padding: 0px 12px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    line-height: 20px;
+                    margin-top: 15px;
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+
+        nav {
+            height: 100px;
+        }
+
+        .nav-item {
+            font-size: 20px;
+            font-family: revert;
+        }
+
+        .navbar-item-list-cls ul {
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NavbarDesign</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+<header>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="top-bar-content">
+                <a href="#">
+                    <p>t-classic@gmail.com</p>
+                </a>
             </div>
-        </nav>
-    </header>
+        </div>
+        <div class="col-md-6">
+            <div class="top-bar-content top-right">
+                <ul>
+                    <li class="">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="">
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li class="">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NavbarDesign</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <partial name="_LoginPartial"/>
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
